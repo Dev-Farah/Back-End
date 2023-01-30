@@ -27,7 +27,7 @@ let dt = require('./exports.js');
 //     }
 // })
 
-// fs.appendFile('./abc.txt', ' \nSome new text from server.js...', (err) => {
+// fs.appendFile('./abc.txt', ' \nAdd another line from server.js...', (err) => {
 //     if(err) {
 //         console.log(err);
 //     }

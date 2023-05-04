@@ -4,9 +4,7 @@ const PORT = process.env.PORT || 5000;
 const mongoose = require('mongoose');
 const userModel = require('./models/user');
 
-
-const DBURI = 'mongodb+srv://farah:admin@cluster0.jueedhl.mongodb.net/test'
-// 'YOUR CONNECTION STRING HERE'
+const DBURI = 'YOUR CONNECTION STRING HERE'
 
 mongoose.connect(DBURI)
 .then((res) => console.log('mongodb connected'))

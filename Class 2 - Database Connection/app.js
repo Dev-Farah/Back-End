@@ -142,7 +142,7 @@ app.put("/api/user/:userId", (request, response) => {
     // console.log(userId, "put");
     
     // userModel.updateOne({_id: userId}, objToSend)
-    userModel.findByIdAndUpdate({_id: userId}, objToSend, {new: true})
+    userModel.findByIdAndUpdate(userId, objToSend, {new: true})
     .then(data => {
         response.json({
             message: `User Updated Successfully`,
@@ -161,7 +161,7 @@ app.put("/api/user/:userId", (request, response) => {
 app.delete("/api/user/:userId", (request, response) => {
     const { userId } = request.params;
     
-    userModel.findByIdAndDelete({_id: userId})
+    userModel.findByIdAndDelete(userId)
     .then(data => {
         response.json({
             message: `User Deleted Successfully`,

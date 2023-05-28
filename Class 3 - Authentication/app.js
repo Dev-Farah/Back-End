@@ -6,13 +6,16 @@ const mongoose = require("mongoose");
 const userModel = require("./models/user");
 const bcrypt = require("bcryptjs");
 const cors = require("cors");
+const jwt = require("jsonwebtoken");
+const SECRET_KEY = process.env.SECRET_KEY || "secret_key";
 
 
 app.use(cors()); // Allow cross origin
 app.use(express.json()); // here .use() is a Middleware and express.json() is a Body-Parser
 
-const DBURI = 'YOUR CONNECTION STRING HERE';
-    
+const DBURI = "mongodb+srv://farah:admin@cluster0.mfgy837.mongodb.net/test";
+  // 'YOUR CONNECTION STRING HERE';
+  
 mongoose
   .connect(DBURI)
   .then((res) => console.log("mongodb connected"))
